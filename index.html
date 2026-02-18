@@ -468,7 +468,219 @@
 
     footer .footer-name { color: var(--gold-light); }
 
+    /* ── PURCHASE SECTION ────────────────────────────── */
+    #buy { background: var(--dark); }
+
+    .nav-buy-link { color: var(--gold) !important; font-weight: 700 !important; }
+
+    .buy-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .buy-info-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.6rem;
+      position: sticky;
+      top: 5rem;
+    }
+
+    .buy-price {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      margin-bottom: 0.2rem;
+    }
+
+    .buy-price-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .buy-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .buy-features li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .buy-features li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    .secure-badge svg {
+      width: 14px; height: 14px;
+      stroke: var(--gold);
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    /* Order form */
+    .order-form {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.2rem 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .form-group input {
+      background: var(--dark-mid);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.72rem 1rem;
+      color: var(--text-main);
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+      width: 100%;
+    }
+
+    .form-group input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(200,168,75,0.15);
+    }
+
+    .form-group input::placeholder { color: var(--text-muted); opacity: 0.55; }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold), #a8852e);
+      color: #0d1117;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      box-shadow: 0 4px 24px rgba(200,168,75,0.35);
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(200,168,75,0.5);
+    }
+
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .form-error {
+      background: rgba(220, 53, 69, 0.1);
+      border: 1px solid rgba(220, 53, 69, 0.3);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.88rem;
+      color: #ff6b7a;
+      margin-top: 0.75rem;
+      display: none;
+    }
+
+    .form-error.visible { display: block; }
+
+    .shipping-info {
+      display: none;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      margin-top: -0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .shipping-info.visible { display: flex; }
+
+    .shipping-info.cheap {
+      background: rgba(200,168,75,0.1);
+      color: var(--gold-light);
+      border: 1px solid rgba(200,168,75,0.25);
+    }
+
+    .shipping-info.pricey {
+      background: rgba(200,168,75,0.07);
+      color: var(--gold-light);
+      border: 1px solid rgba(200,168,75,0.2);
+    }
+
+    .shipping-info.unknown {
+      background: rgba(139,148,158,0.08);
+      color: var(--text-muted);
+      border: 1px solid rgba(139,148,158,0.2);
+    }
+
+    .shipping-info svg {
+      width: 14px; height: 14px;
+      stroke: currentColor;
+      fill: none;
+      flex-shrink: 0;
+    }
+
     /* ── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .buy-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .buy-info-card { position: static; }
+    }
+
     @media (max-width: 640px) {
       .nav-links { display: none; }
 
@@ -481,6 +693,8 @@
       .author-avatar { margin: 0 auto; }
 
       .cover-caption { gap: 0.7rem; }
+
+      .order-form { padding: 1.6rem 1.2rem; }
     }
   </style>
 </head>
@@ -493,6 +707,7 @@
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav.about">درباره کتاب</a></li>
         <li><a href="#author" data-i18n="nav.author">نویسنده</a></li>
+        <li><a href="#buy" data-i18n="nav.buy" class="nav-buy-link">خرید</a></li>
         <li><a href="mailto:dr.aam.uk@gmail.com" data-i18n="nav.contact">تماس</a></li>
       </ul>
       <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">EN</button>
@@ -601,68 +816,286 @@
     </div>
   </section>
 
+  <!-- PURCHASE -->
+  <section id="buy">
+    <div class="container">
+      <span class="section-tag" data-i18n="buy.tag">خرید کتاب</span>
+      <h2 class="section-heading" data-i18n="buy.heading">سفارش و خرید آنلاین</h2>
+      <div class="divider"></div>
+
+      <div class="buy-layout">
+
+        <!-- Summary card -->
+        <div class="buy-info-card">
+          <div class="buy-price" data-i18n="buy.price">£XX</div>
+          <div class="buy-price-note" data-i18n="buy.price.note">+ هزینه ارسال</div>
+          <ul class="buy-features">
+            <li data-i18n="buy.f1">ارسال به سراسر جهان</li>
+            <li data-i18n="buy.f2">پرداخت امن از طریق Stripe</li>
+            <li data-i18n="buy.f3">رسید از طریق ایمیل</li>
+            <li data-i18n="buy.f4">چاپ با کیفیت بالا</li>
+          </ul>
+          <div class="secure-badge">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span data-i18n="buy.secure">پرداخت امن و رمزگذاری‌شده</span>
+          </div>
+        </div>
+
+        <!-- Order form -->
+        <form class="order-form" id="order-form" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form.name.label">نام کامل</label>
+              <input type="text" name="name"
+                data-i18n-placeholder="form.name.ph"
+                placeholder="نام و نام خانوادگی"
+                required autocomplete="name" dir="auto" />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form.phone.label">شماره تلفن</label>
+              <input type="tel" name="phone"
+                data-i18n-placeholder="form.phone.ph"
+                placeholder="+44 7000 000000"
+                required autocomplete="tel" dir="ltr" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="form.addr1.label">آدرس — خط اول</label>
+            <input type="text" name="address_line1"
+              data-i18n-placeholder="form.addr1.ph"
+              placeholder="خیابان، پلاک"
+              required autocomplete="address-line1" dir="auto" />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="form.addr2.label">آدرس — خط دوم (اختیاری)</label>
+            <input type="text" name="address_line2"
+              data-i18n-placeholder="form.addr2.ph"
+              placeholder="آپارتمان، واحد..."
+              autocomplete="address-line2" dir="auto" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form.city.label">شهر</label>
+              <input type="text" name="city"
+                data-i18n-placeholder="form.city.ph"
+                placeholder="شهر"
+                required autocomplete="address-level2" dir="auto" />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form.country.label">کشور</label>
+              <input type="text" name="country"
+                data-i18n-placeholder="form.country.ph"
+                placeholder="کشور"
+                required autocomplete="country-name" dir="auto" />
+            </div>
+          </div>
+
+          <!-- Shipping cost indicator -->
+          <div class="shipping-info" id="shipping-info">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1"></rect>
+              <path d="M16 8h4l3 5v3h-7V8z"></path>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span id="shipping-info-text"></span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn" data-i18n="form.submit">
+            ادامه به پرداخت
+          </button>
+          <div class="form-error" id="form-error" data-i18n="form.error">
+            خطایی رخ داد. لطفاً دوباره تلاش کنید.
+          </div>
+          <p class="form-note" data-i18n="form.note">
+            پس از تأیید اطلاعات، به درگاه امن Stripe هدایت می‌شوید.
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>© <span class="footer-name" data-i18n="footer.year">۲۰۲۶</span> <span class="footer-name" data-i18n="footer.name">پروفیسور دکتور لعل زاد</span> — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
   </footer>
 
   <script>
+    // ── CONFIGURATION ─────────────────────────────────────────────────────────
+    const FORMSPREE_ID = 'xpqjljvz';
+
+    // ── STRIPE PAYMENT LINKS ──────────────────────────────────────────────────
+    const STRIPE_LINK_UK        = 'https://buy.stripe.com/6oUcN629g2sB6uggI84F202';
+    const STRIPE_LINK_EUROPE    = 'https://buy.stripe.com/4gMcN63dkffn6ug9fG4F201';
+    const STRIPE_LINK_USA       = 'https://buy.stripe.com/fZuaEY5lsaZ7g4Q1Ne4F203';
+    const STRIPE_LINK_WORLDWIDE = 'https://buy.stripe.com/bJeaEYeW24AJ7ykfE44F200';
+
+    // ── COUNTRY LISTS ─────────────────────────────────────────────────────────
+    const UK_COUNTRIES = [
+      'united kingdom','uk','england','scotland','wales',
+      'northern ireland','great britain','britain'
+    ];
+
+    const EUROPEAN_COUNTRIES = [
+      'albania','andorra','armenia','austria','azerbaijan','belarus','belgium',
+      'bosnia','bosnia and herzegovina','bulgaria','croatia','cyprus',
+      'czech republic','czechia','denmark','estonia','finland','france',
+      'georgia','germany','greece','hungary','iceland','ireland','italy',
+      'kosovo','latvia','liechtenstein','lithuania','luxembourg','malta',
+      'moldova','monaco','montenegro','netherlands','holland','north macedonia',
+      'norway','poland','portugal','romania','russia','san marino','serbia',
+      'slovakia','slovenia','spain','sweden','switzerland','turkey','ukraine',
+      'vatican city','vatican'
+    ];
+
+    const USA_NAMES = [
+      'united states','united states of america','usa','us','america'
+    ];
+
+    function detectZone(countryInput) {
+      const c = countryInput.trim().toLowerCase();
+      if (!c) return null;
+      if (UK_COUNTRIES.includes(c)) return 'uk';
+      if (UK_COUNTRIES.some(n => n.startsWith(c) && c.length >= 2)) return 'uk';
+      if (USA_NAMES.includes(c)) return 'usa';
+      if (USA_NAMES.some(n => n.startsWith(c) && c.length >= 3)) return 'usa';
+      if (EUROPEAN_COUNTRIES.includes(c)) return 'europe';
+      if (EUROPEAN_COUNTRIES.some(n => n.startsWith(c) && c.length >= 3)) return 'europe';
+      return 'worldwide';
+    }
+
+    function getStripeLink(zone) {
+      if (zone === 'uk')      return STRIPE_LINK_UK;
+      if (zone === 'europe')  return STRIPE_LINK_EUROPE;
+      if (zone === 'usa')     return STRIPE_LINK_USA;
+      return STRIPE_LINK_WORLDWIDE;
+    }
+    // ──────────────────────────────────────────────────────────────────────────
+
     const translations = {
       fa: {
-        'nav.brand':      'پروفیسور دکتور لعل زاد',
-        'nav.about':      'درباره کتاب',
-        'nav.author':     'نویسنده',
-        'nav.contact':    'تماس',
-        'hero.badge':     'لندن ۲۰۲۶ · پژوهش تاریخی',
-        'hero.title':     'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای',
-        'hero.subtitle':  'اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶',
-        'hero.cta':       'بیشتر بخوانید',
-        'cover.caption1': 'جلد فارسی · هزاره‌ها',
-        'about.tag':      'درباره کتاب',
-        'about.heading':  'سیر تکوین قومی هزاره‌ها در گستره زمان',
-        'about.intro':    'این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.',
-        'card1.title':    'تحلیل منابع تاریخی',
-        'card1.text':     'بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.',
-        'card2.title':    'جغرافیای انسانی',
-        'card2.text':     'مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.',
-        'card3.title':    'هویت شناسی',
-        'card3.text':     'تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.',
-        'author.tag':     'نویسنده',
-        'author.heading': 'درباره نویسنده و ارتباط',
-        'author.name':    'پروفیسور دکتور لعل زاد',
-        'author.role':    'پژوهشگر تاریخ و جغرافیای منطقه — لندن',
-        'author.bio':     'پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.',
-        'footer.year':    '۲۰۲۶',
-        'footer.name':    'پروفیسور دکتور لعل زاد',
-        'footer.rights':  'تمامی حقوق محفوظ است.',
+        'nav.brand':        'پروفیسور دکتور لعل زاد',
+        'nav.about':        'درباره کتاب',
+        'nav.author':       'نویسنده',
+        'nav.buy':          'خرید',
+        'nav.contact':      'تماس',
+        'hero.badge':       'لندن ۲۰۲۶ · پژوهش تاریخی',
+        'hero.title':       'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای',
+        'hero.subtitle':    'اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶',
+        'hero.cta':         'بیشتر بخوانید',
+        'cover.caption1':   'جلد فارسی · هزاره‌ها',
+        'about.tag':        'درباره کتاب',
+        'about.heading':    'سیر تکوین قومی هزاره‌ها در گستره زمان',
+        'about.intro':      'این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.',
+        'card1.title':      'تحلیل منابع تاریخی',
+        'card1.text':       'بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.',
+        'card2.title':      'جغرافیای انسانی',
+        'card2.text':       'مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.',
+        'card3.title':      'هویت شناسی',
+        'card3.text':       'تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.',
+        'author.tag':       'نویسنده',
+        'author.heading':   'درباره نویسنده و ارتباط',
+        'author.name':      'پروفیسور دکتور لعل زاد',
+        'author.role':      'پژوهشگر تاریخ و جغرافیای منطقه — لندن',
+        'author.bio':       'پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.',
+        'buy.tag':          'خرید کتاب',
+        'buy.heading':      'سفارش و خرید آنلاین',
+        'buy.price':        '£XX',
+        'buy.price.note':   '+ هزینه ارسال',
+        'buy.f1':           'ارسال به سراسر جهان',
+        'buy.f2':           'پرداخت امن از طریق Stripe',
+        'buy.f3':           'رسید از طریق ایمیل',
+        'buy.f4':           'چاپ با کیفیت بالا',
+        'buy.secure':       'پرداخت امن و رمزگذاری‌شده',
+        'form.name.label':  'نام کامل',
+        'form.name.ph':     'نام و نام خانوادگی',
+        'form.phone.label': 'شماره تلفن',
+        'form.phone.ph':    '+44 7000 000000',
+        'form.addr1.label': 'آدرس — خط اول',
+        'form.addr1.ph':    'خیابان، پلاک',
+        'form.addr2.label': 'آدرس — خط دوم (اختیاری)',
+        'form.addr2.ph':    'آپارتمان، واحد...',
+        'form.city.label':  'شهر',
+        'form.city.ph':     'شهر',
+        'form.country.label':'کشور',
+        'form.country.ph':  'کشور',
+        'form.submit':      'ادامه به پرداخت',
+        'form.submitting':  'در حال پردازش...',
+        'form.error':       'خطایی رخ داد. لطفاً دوباره تلاش کنید.',
+        'form.note':        'پس از تأیید اطلاعات، به درگاه امن Stripe هدایت می‌شوید.',
+        'ship.uk':          'ارسال به بریتانیا',
+        'ship.europe':      'ارسال به اروپا',
+        'ship.usa':         'ارسال به آمریکا',
+        'ship.worldwide':   'ارسال بین‌المللی — با ما تماس بگیرید',
+        'footer.year':      '۲۰۲۶',
+        'footer.name':      'پروفیسور دکتور لعل زاد',
+        'footer.rights':    'تمامی حقوق محفوظ است.',
       },
       en: {
-        'nav.brand':      'Prof. Dr. Lalzad',
-        'nav.about':      'About the Book',
-        'nav.author':     'Author',
-        'nav.contact':    'Contact',
-        'hero.badge':     'London 2026 · Historical Research',
-        'hero.title':     'Hazaras: A Study in History and Geography',
-        'hero.subtitle':  'By Prof. Dr. Lalzad — London 2026',
-        'hero.cta':       'Read More',
-        'cover.caption1': 'Persian Cover · Hazaras',
-        'about.tag':      'About the Book',
-        'about.heading':  'The Ethnic Evolution of the Hazaras Through Time',
-        'about.intro':    'This new scholarly work by Prof. Dr. Lalzad offers a deep and rigorous examination of the historical and geographical roots of the Hazara people. Drawing on authoritative sources from the Mongol and Timurid periods, the book explores the military units of thousand-man formations and their transformation into an ethnic identity and present-day settlement areas.',
-        'card1.title':    'Historical Source Analysis',
-        'card1.text':     'Careful examination of classical texts and ancient maps from the Mongol and Timurid periods using rigorous scholarly methodology.',
-        'card2.title':    'Human Geography',
-        'card2.text':     'Study of migration routes and historical settlements of the Hazara people across the regional geographical landscape.',
-        'card3.title':    'Identity Studies',
-        'card3.text':     'Clarifying the distinction between the historical military concept of "Hazara" and its modern ethnic meaning through critical analysis.',
-        'author.tag':     'Author',
-        'author.heading': 'About the Author & Contact',
-        'author.name':    'Prof. Dr. Lalzad',
-        'author.role':    'Researcher in Regional History & Geography — London',
-        'author.bio':     'Prof. Dr. Lalzad is a London-based researcher specialising in regional history and geography. He has prepared this collection for publication in 2026.',
-        'footer.year':    '2026',
-        'footer.name':    'Prof. Dr. Lalzad',
-        'footer.rights':  'All rights reserved.',
+        'nav.brand':        'Prof. Dr. Lalzad',
+        'nav.about':        'About the Book',
+        'nav.author':       'Author',
+        'nav.buy':          'Buy',
+        'nav.contact':      'Contact',
+        'hero.badge':       'London 2026 · Historical Research',
+        'hero.title':       'Hazaras: A Study in History and Geography',
+        'hero.subtitle':    'By Prof. Dr. Lalzad — London 2026',
+        'hero.cta':         'Read More',
+        'cover.caption1':   'Persian Cover · Hazaras',
+        'about.tag':        'About the Book',
+        'about.heading':    'The Ethnic Evolution of the Hazaras Through Time',
+        'about.intro':      'This new scholarly work by Prof. Dr. Lalzad offers a deep and rigorous examination of the historical and geographical roots of the Hazara people. Drawing on authoritative sources from the Mongol and Timurid periods, the book explores the military units of thousand-man formations and their transformation into an ethnic identity and present-day settlement areas.',
+        'card1.title':      'Historical Source Analysis',
+        'card1.text':       'Careful examination of classical texts and ancient maps from the Mongol and Timurid periods using rigorous scholarly methodology.',
+        'card2.title':      'Human Geography',
+        'card2.text':       'Study of migration routes and historical settlements of the Hazara people across the regional geographical landscape.',
+        'card3.title':      'Identity Studies',
+        'card3.text':       'Clarifying the distinction between the historical military concept of "Hazara" and its modern ethnic meaning through critical analysis.',
+        'author.tag':       'Author',
+        'author.heading':   'About the Author & Contact',
+        'author.name':      'Prof. Dr. Lalzad',
+        'author.role':      'Researcher in Regional History & Geography — London',
+        'author.bio':       'Prof. Dr. Lalzad is a London-based researcher specialising in regional history and geography. He has prepared this collection for publication in 2026.',
+        'buy.tag':          'Buy the Book',
+        'buy.heading':      'Order Online',
+        'buy.price':        '£XX',
+        'buy.price.note':   '+ shipping',
+        'buy.f1':           'Worldwide shipping',
+        'buy.f2':           'Secure payment via Stripe',
+        'buy.f3':           'Email receipt included',
+        'buy.f4':           'High-quality print',
+        'buy.secure':       'Encrypted & secure checkout',
+        'form.name.label':  'Full Name',
+        'form.name.ph':     'Your full name',
+        'form.phone.label': 'Phone Number',
+        'form.phone.ph':    '+44 7000 000000',
+        'form.addr1.label': 'Address Line 1',
+        'form.addr1.ph':    'Street address',
+        'form.addr2.label': 'Address Line 2 (optional)',
+        'form.addr2.ph':    'Apartment, suite...',
+        'form.city.label':  'City',
+        'form.city.ph':     'City',
+        'form.country.label':'Country',
+        'form.country.ph':  'Country',
+        'form.submit':      'Proceed to Payment',
+        'form.submitting':  'Processing...',
+        'form.error':       'Something went wrong. Please try again.',
+        'form.note':        'After confirming your details, you will be redirected to Stripe for secure payment.',
+        'ship.uk':          'Shipping to UK',
+        'ship.europe':      'Shipping to Europe',
+        'ship.usa':         'Shipping to USA',
+        'ship.worldwide':   'International shipping — please contact us for rates',
+        'footer.year':      '2026',
+        'footer.name':      'Prof. Dr. Lalzad',
+        'footer.rights':    'All rights reserved.',
       }
     };
 
@@ -673,10 +1106,19 @@
       html.lang = lang;
       html.dir = lang === 'fa' ? 'rtl' : 'ltr';
 
+      // Update text content
       document.querySelectorAll('[data-i18n]').forEach(function(el) {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key] !== undefined) {
           el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update input placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key] !== undefined) {
+          el.placeholder = translations[lang][key];
         }
       });
 
@@ -700,9 +1142,7 @@
           : 'Hazaras: A Study in History and Geography — By Prof. Dr. Lalzad';
       }
 
-      // Update button label to show the other language
       document.getElementById('lang-btn').textContent = lang === 'fa' ? 'EN' : 'فا';
-
       localStorage.setItem('lang', lang);
       currentLang = lang;
     }
@@ -710,6 +1150,83 @@
     function toggleLanguage() {
       setLanguage(currentLang === 'fa' ? 'en' : 'fa');
     }
+
+    // ── LIVE SHIPPING INDICATOR ───────────────────────────────────────────────
+    function updateShippingInfo(countryValue) {
+      const indicator = document.getElementById('shipping-info');
+      const label     = document.getElementById('shipping-info-text');
+      const t         = translations[currentLang];
+      const zone      = detectZone(countryValue);
+
+      indicator.classList.remove('visible', 'cheap', 'pricey', 'unknown');
+
+      if (!zone) return;
+
+      indicator.classList.add('visible');
+      if (zone === 'uk') {
+        indicator.classList.add('cheap');
+        label.textContent = t['ship.uk'];
+      } else if (zone === 'europe') {
+        indicator.classList.add('cheap');
+        label.textContent = t['ship.europe'];
+      } else if (zone === 'usa') {
+        indicator.classList.add('pricey');
+        label.textContent = t['ship.usa'];
+      } else {
+        indicator.classList.add('unknown');
+        label.textContent = t['ship.worldwide'];
+      }
+    }
+
+    document.querySelector('[name="country"]').addEventListener('input', function() {
+      updateShippingInfo(this.value);
+    });
+
+    // ── FORM SUBMISSION ───────────────────────────────────────────────────────
+    document.getElementById('order-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const form      = e.target;
+      const btn       = document.getElementById('submit-btn');
+      const errorBox  = document.getElementById('form-error');
+      const t         = translations[currentLang];
+
+      // Basic validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let valid = true;
+      requiredFields.forEach(function(field) {
+        if (!field.value.trim()) { field.focus(); valid = false; }
+      });
+      if (!valid) return;
+
+      // Detect shipping zone and choose Stripe link
+      const zone       = detectZone(form.querySelector('[name="country"]').value);
+      const stripeLink = getStripeLink(zone);
+
+      // Loading state
+      btn.disabled    = true;
+      btn.textContent = t['form.submitting'];
+      errorBox.classList.remove('visible');
+
+      try {
+        const response = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+          method:  'POST',
+          body:    new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          window.location.href = stripeLink;
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        btn.disabled    = false;
+        btn.textContent = t['form.submit'];
+        errorBox.textContent = t['form.error'];
+        errorBox.classList.add('visible');
+      }
+    });
 
     // Apply saved language on page load
     setLanguage(currentLang);
