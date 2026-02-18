@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای - اثری از پروفیسور دکتور لعل زاد" />
-  <title>هزاره‌ها – پروفیسور دکتور لعل زاد</title>
+  <meta name="description" content="آثار پروفیسور دکتور لعل زاد — هزاره‌ها، بحران، افغان‌ها" />
+  <title>آثار پروفیسور دکتور لعل زاد</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --gold:      #c8a84b;
@@ -23,7 +19,7 @@
       --dark-card: #1c2333;
       --text-main: #e6edf3;
       --text-muted:#8b949e;
-      --border:    rgba(200, 168, 75, 0.25);
+      --border:    rgba(200,168,75,0.25);
       --radius:    14px;
     }
 
@@ -42,91 +38,57 @@
       font-family: 'Vazirmatn', 'Segoe UI', sans-serif;
     }
 
-    /* ── NAV ─────────────────────────────────────────── */
+    /* ── NAV ──────────────────────────────────────────── */
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(13, 17, 23, 0.88);
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(13,17,23,0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       padding: 0.85rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
     }
 
-    .nav-brand {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
+    .nav-brand { font-size: 1rem; font-weight: 700; color: var(--gold); }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
 
-    .nav-links {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
 
     .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.25s;
+      color: var(--text-muted); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500; transition: color 0.25s;
     }
 
     .nav-links a:hover { color: var(--gold-light); }
 
-    /* ── LANGUAGE SWITCHER ──────────────────────────── */
+    .nav-buy-link { color: var(--gold) !important; font-weight: 700 !important; }
+
     .lang-btn {
-      background: rgba(200,168,75,0.1);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.3rem 0.85rem;
-      color: var(--gold-light);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      cursor: pointer;
+      background: rgba(200,168,75,0.1); border: 1px solid var(--border);
+      border-radius: 100px; padding: 0.3rem 0.85rem;
+      color: var(--gold-light); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.06em; cursor: pointer;
       transition: background 0.25s, border-color 0.25s;
-      font-family: 'Vazirmatn', sans-serif;
-      flex-shrink: 0;
+      font-family: 'Vazirmatn', sans-serif; flex-shrink: 0;
     }
 
-    .lang-btn:hover {
-      background: rgba(200,168,75,0.22);
-      border-color: var(--gold);
-    }
+    .lang-btn:hover { background: rgba(200,168,75,0.22); border-color: var(--gold); }
 
-    /* ── HERO ────────────────────────────────────────── */
+    /* ── HERO ─────────────────────────────────────────── */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
       text-align: center;
       padding: 8rem 1.5rem 5rem;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
       background:
         radial-gradient(ellipse 90% 55% at 50% 0%, rgba(200,168,75,0.13) 0%, transparent 65%),
         var(--dark);
     }
 
-    /* subtle grid overlay */
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+      content: ''; position: absolute; inset: 0;
       background:
         repeating-linear-gradient(0deg,  transparent, transparent 59px, rgba(200,168,75,0.04) 60px),
         repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(200,168,75,0.04) 60px);
@@ -135,218 +97,128 @@
 
     .hero-badge {
       display: inline-block;
-      background: rgba(200,168,75,0.12);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.35rem 1.1rem;
-      font-size: 0.82rem;
-      color: var(--gold-light);
-      letter-spacing: 0.04em;
-      margin-bottom: 1.6rem;
+      background: rgba(200,168,75,0.12); border: 1px solid var(--border);
+      border-radius: 100px; padding: 0.35rem 1.1rem;
+      font-size: 0.82rem; color: var(--gold-light);
+      letter-spacing: 0.04em; margin-bottom: 1.6rem;
     }
 
     .hero-title {
-      font-size: clamp(1.9rem, 4.8vw, 3.5rem);
-      font-weight: 800;
-      line-height: 1.4;
-      max-width: 820px;
+      font-size: clamp(1.9rem, 4.8vw, 3.5rem); font-weight: 800;
+      line-height: 1.4; max-width: 820px;
       background: linear-gradient(140deg, #fff 25%, var(--gold-light) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 0.8rem;
     }
 
     .hero-subtitle {
       font-size: clamp(0.95rem, 2.2vw, 1.18rem);
-      color: var(--text-muted);
-      font-weight: 400;
-      max-width: 560px;
-      margin-bottom: 2.4rem;
+      color: var(--text-muted); font-weight: 400;
+      max-width: 600px; margin-bottom: 3rem;
     }
 
-    .hero-cta {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--gold), #a8852e);
-      color: #0d1117;
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 0.85rem 2.4rem;
-      border-radius: 100px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 24px rgba(200,168,75,0.35);
-      margin-bottom: 3.5rem;
-    }
-
-    .hero-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(200,168,75,0.5);
-    }
-
-    /* ── BOOK COVER SHOWCASE ─────────────────────────── */
-    .cover-wrap {
+    /* 3-book showcase */
+    .hero-books {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem; max-width: 820px; width: 100%; z-index: 1;
       position: relative;
-      width: 100%;
-      max-width: 860px;
-      z-index: 1;
     }
 
-    /* glow behind the image */
-    .cover-wrap::before {
+    .hero-books::before {
       content: '';
-      position: absolute;
-      inset: -20px -30px;
-      background: radial-gradient(ellipse at center, rgba(200,168,75,0.22) 0%, transparent 70%);
-      border-radius: 30px;
-      z-index: -1;
-      filter: blur(18px);
+      position: absolute; inset: -30px -40px;
+      background: radial-gradient(ellipse at center, rgba(200,168,75,0.18) 0%, transparent 70%);
+      border-radius: 30px; z-index: -1; filter: blur(20px);
     }
 
-    .cover-img {
-      width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(200,168,75,0.35);
-      box-shadow:
-        0 2px 4px  rgba(0,0,0,0.5),
-        0 8px 24px rgba(0,0,0,0.6),
-        0 32px 64px rgba(0,0,0,0.5),
-        0 0 0 1px rgba(200,168,75,0.1);
+    .hero-book {
+      text-decoration: none;
+      display: flex; flex-direction: column; align-items: center; gap: 0.9rem;
+      transition: transform 0.35s;
+    }
+
+    .hero-book:hover { transform: translateY(-8px); }
+
+    .hero-book-img {
+      width: 100%; border-radius: 12px;
+      border: 1px solid rgba(200,168,75,0.3);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
       display: block;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      transition: box-shadow 0.35s;
     }
 
-    .cover-img:hover {
-      transform: scale(1.015);
-      box-shadow:
-        0 4px 8px   rgba(0,0,0,0.55),
-        0 16px 40px rgba(0,0,0,0.65),
-        0 48px 80px rgba(0,0,0,0.55),
-        0 0 60px    rgba(200,168,75,0.2);
+    .hero-book:hover .hero-book-img {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.65), 0 0 40px rgba(200,168,75,0.18);
     }
 
-    /* caption strip below image */
-    .cover-caption {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1.2rem;
-      flex-wrap: wrap;
+    .hero-book-title {
+      font-size: 0.95rem; font-weight: 700; color: var(--gold-light);
     }
 
-    .cover-caption span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.3rem 0.9rem;
-      background: rgba(200,168,75,0.06);
-    }
-
-    /* scroll arrow */
     .scroll-indicator {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
+      position: absolute; bottom: 2rem; left: 50%;
       transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.35rem;
-      color: var(--text-muted);
-      font-size: 0.75rem;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.35rem; color: var(--text-muted); font-size: 0.75rem;
       animation: bob 2.5s ease-in-out infinite;
     }
 
-    .scroll-indicator svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--gold);
-    }
+    .scroll-indicator svg { width: 20px; height: 20px; stroke: var(--gold); }
 
     @keyframes bob {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50%       { transform: translateX(-50%) translateY(8px); }
     }
 
-    /* ── SECTION BASE ────────────────────────────────── */
+    /* ── SECTION BASE ─────────────────────────────────── */
     section { padding: 6rem 1.5rem; }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    .container { max-width: 1000px; margin: 0 auto; }
 
     .section-tag {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
+      display: inline-block; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.8rem;
     }
 
     .section-heading {
-      font-size: clamp(1.55rem, 3.5vw, 2.35rem);
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
+      font-size: clamp(1.55rem, 3.5vw, 2.35rem); font-weight: 800;
+      margin-bottom: 1.5rem; line-height: 1.4;
     }
 
     .divider {
-      width: 60px;
-      height: 3px;
+      width: 60px; height: 3px;
       background: linear-gradient(90deg, var(--gold), transparent);
-      border-radius: 10px;
-      margin-bottom: 2.5rem;
+      border-radius: 10px; margin-bottom: 2.5rem;
     }
-
-    html[lang="en"] .divider {
-      background: linear-gradient(90deg, var(--gold), transparent);
-    }
-
-    /* ── ABOUT SECTION ───────────────────────────────── */
-    #about { background: var(--dark-mid); }
 
     .about-intro {
-      font-size: 1.06rem;
-      color: var(--text-muted);
-      max-width: 780px;
-      margin-bottom: 3rem;
-      line-height: 1.95;
+      font-size: 1.06rem; color: var(--text-muted);
+      max-width: 780px; margin-bottom: 3rem; line-height: 1.95;
     }
 
+    /* ── FEATURES GRID ────────────────────────────────── */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.4rem;
+      gap: 1.4rem; margin-bottom: 2.5rem;
     }
 
     .feature-card {
-      background: var(--dark-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.8rem 1.6rem;
+      background: var(--dark-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.8rem 1.6rem;
       transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
 
     .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 50%;
-      height: 2px;
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 50%; height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold));
-      opacity: 0;
-      transition: opacity 0.3s;
+      opacity: 0; transition: opacity 0.3s;
     }
 
     .feature-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
+      border-color: var(--gold); transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(200,168,75,0.15);
     }
 
@@ -354,347 +226,259 @@
 
     .feature-icon {
       width: 44px; height: 44px;
-      background: rgba(200,168,75,0.12);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
+      background: rgba(200,168,75,0.12); border: 1px solid var(--border);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; margin-bottom: 1rem; font-size: 1.3rem;
     }
 
     .feature-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
+      font-size: 1.05rem; font-weight: 700; color: var(--text-main);
       margin-bottom: 0.6rem;
     }
 
-    .feature-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.8;
+    .feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
+
+    /* buy-book CTA inside book sections */
+    .book-buy-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), #a8852e);
+      color: #0d1117; font-family: 'Vazirmatn', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      padding: 0.75rem 2rem; border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(200,168,75,0.3);
     }
+
+    .book-buy-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,168,75,0.45);
+    }
+
+    /* ── BOOK SECTIONS ────────────────────────────────── */
+    #hazaras { background: var(--dark-mid); }
+    #bohran  { background: var(--dark); }
+    #afghans { background: var(--dark-mid); }
 
     /* ── AUTHOR SECTION ──────────────────────────────── */
     #author { background: var(--dark); }
 
     .author-card {
-      background: var(--dark-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 3rem 2.5rem;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2.5rem;
-      align-items: start;
+      background: var(--dark-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 3rem 2.5rem;
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 2.5rem; align-items: start;
     }
 
     .author-avatar {
-      width: 90px; height: 90px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      box-shadow: 0 0 0 4px rgba(200,168,75,0.2);
-      overflow: hidden;
-      border: 2px solid var(--border);
+      width: 90px; height: 90px; border-radius: 50%;
+      flex-shrink: 0; box-shadow: 0 0 0 4px rgba(200,168,75,0.2);
+      overflow: hidden; border: 2px solid var(--border);
     }
 
     .author-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
-      display: block;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 25%; display: block;
     }
 
-    .author-info h3 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 0.4rem;
-    }
+    .author-info h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.4rem; }
 
     .author-info .author-title {
-      color: var(--gold-light);
-      font-size: 0.92rem;
-      margin-bottom: 1.2rem;
-      font-weight: 500;
+      color: var(--gold-light); font-size: 0.92rem;
+      margin-bottom: 1.2rem; font-weight: 500;
     }
 
     .author-info p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      max-width: 620px;
-      line-height: 1.9;
-      margin-bottom: 1.8rem;
+      font-size: 0.98rem; color: var(--text-muted);
+      max-width: 620px; line-height: 1.9; margin-bottom: 1.8rem;
     }
 
     .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(200,168,75,0.1);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.6rem 1.4rem;
-      color: var(--gold-light);
-      text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 600;
-      transition: background 0.25s, border-color 0.25s;
-      direction: ltr;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(200,168,75,0.1); border: 1px solid var(--border);
+      border-radius: 100px; padding: 0.6rem 1.4rem;
+      color: var(--gold-light); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      transition: background 0.25s, border-color 0.25s; direction: ltr;
     }
 
-    .contact-link:hover {
-      background: rgba(200,168,75,0.2);
-      border-color: var(--gold);
-    }
+    .contact-link:hover { background: rgba(200,168,75,0.2); border-color: var(--gold); }
 
-    .contact-link svg {
-      width: 16px; height: 16px;
-      stroke: var(--gold);
-      fill: none;
-    }
+    .contact-link svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; }
 
-    /* ── FOOTER ──────────────────────────────────────── */
-    footer {
-      background: var(--dark-mid);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      padding: 2.2rem 1.5rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    footer .footer-name { color: var(--gold-light); }
-
-    /* ── PURCHASE SECTION ────────────────────────────── */
-    #buy { background: var(--dark); }
-
-    .nav-buy-link { color: var(--gold) !important; font-weight: 700 !important; }
+    /* ── PURCHASE SECTION ─────────────────────────────── */
+    #buy { background: var(--dark-mid); }
 
     .buy-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 2.5rem;
-      align-items: start;
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 2.5rem; align-items: start;
     }
 
     .buy-info-card {
-      background: var(--dark-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem 1.6rem;
-      position: sticky;
-      top: 5rem;
+      background: var(--dark-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2rem 1.6rem;
+      position: sticky; top: 5rem;
     }
 
-    .buy-price {
-      font-size: 2.4rem;
-      font-weight: 800;
-      color: var(--gold-light);
-      margin-bottom: 0.2rem;
-    }
-
-    .buy-price-note {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 1.6rem;
-    }
+    .buy-price-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.6rem; }
 
     .buy-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      margin-bottom: 1.6rem;
+      list-style: none; display: flex; flex-direction: column;
+      gap: 0.8rem; margin-bottom: 1.6rem;
     }
 
     .buy-features li {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
+      font-size: 0.88rem; color: var(--text-muted);
+      display: flex; align-items: flex-start; gap: 0.6rem;
     }
 
     .buy-features li::before {
-      content: '✓';
-      color: var(--gold);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 0.05rem;
+      content: '✓'; color: var(--gold); font-weight: 700;
+      flex-shrink: 0; margin-top: 0.05rem;
     }
 
     .secure-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      padding-top: 1.2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; color: var(--text-muted);
+      border-top: 1px solid var(--border); padding-top: 1.2rem;
     }
 
-    .secure-badge svg {
-      width: 14px; height: 14px;
-      stroke: var(--gold);
-      fill: none;
-      flex-shrink: 0;
+    .secure-badge svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; flex-shrink: 0; }
+
+    /* Book selector */
+    .book-selector-label {
+      font-size: 0.82rem; font-weight: 700; color: var(--text-muted);
+      letter-spacing: 0.08em; margin-bottom: 0.8rem;
     }
+
+    .book-selector {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem; margin-bottom: 2rem;
+    }
+
+    .book-option {
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.75rem 0.5rem; cursor: pointer;
+      transition: border-color 0.25s, background 0.25s;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      background: var(--dark-mid);
+    }
+
+    .book-option:hover { border-color: rgba(200,168,75,0.5); }
+
+    .book-option.active {
+      border-color: var(--gold); background: rgba(200,168,75,0.08);
+    }
+
+    .book-option img {
+      width: 100%; border-radius: 5px;
+      aspect-ratio: 3/4; object-fit: cover;
+      border: 1px solid rgba(200,168,75,0.15);
+    }
+
+    .book-option span {
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+      text-align: center; line-height: 1.3;
+    }
+
+    .book-option.active span { color: var(--gold-light); }
 
     /* Order form */
     .order-form {
-      background: var(--dark-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2.2rem 2rem;
+      background: var(--dark-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2.2rem 2rem;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-      margin-bottom: 1.1rem;
+      display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.1rem;
     }
 
     .form-group label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--text-muted); letter-spacing: 0.04em;
     }
 
     .form-group input {
-      background: var(--dark-mid);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.72rem 1rem;
-      color: var(--text-main);
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: 0.95rem;
+      background: var(--dark-mid); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.72rem 1rem; color: var(--text-main);
+      font-family: 'Vazirmatn', sans-serif; font-size: 0.95rem;
       transition: border-color 0.25s, box-shadow 0.25s;
-      outline: none;
-      width: 100%;
+      outline: none; width: 100%;
     }
 
     .form-group input:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(200,168,75,0.15);
+      border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,168,75,0.15);
     }
 
     .form-group input::placeholder { color: var(--text-muted); opacity: 0.55; }
 
+    .shipping-info {
+      display: none; align-items: center; gap: 0.55rem;
+      font-size: 0.84rem; font-weight: 600;
+      padding: 0.55rem 0.9rem; border-radius: 8px;
+      margin-top: -0.3rem; margin-bottom: 1rem;
+    }
+
+    .shipping-info.visible { display: flex; }
+    .shipping-info.cheap   { background: rgba(200,168,75,0.1); color: var(--gold-light); border: 1px solid rgba(200,168,75,0.25); }
+    .shipping-info.pricey  { background: rgba(200,168,75,0.07); color: var(--gold-light); border: 1px solid rgba(200,168,75,0.2); }
+    .shipping-info.unknown { background: rgba(139,148,158,0.08); color: var(--text-muted); border: 1px solid rgba(139,148,158,0.2); }
+
+    .shipping-info svg { width: 14px; height: 14px; stroke: currentColor; fill: none; flex-shrink: 0; }
+
     .submit-btn {
       width: 100%;
       background: linear-gradient(135deg, var(--gold), #a8852e);
-      color: #0d1117;
-      font-family: 'Vazirmatn', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 0.9rem 2rem;
-      border: none;
-      border-radius: 100px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
-      box-shadow: 0 4px 24px rgba(200,168,75,0.35);
-      margin-top: 0.5rem;
+      color: #0d1117; font-family: 'Vazirmatn', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      padding: 0.9rem 2rem; border: none; border-radius: 100px;
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      box-shadow: 0 4px 24px rgba(200,168,75,0.35); margin-top: 0.5rem;
     }
 
-    .submit-btn:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(200,168,75,0.5);
-    }
-
+    .submit-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,168,75,0.5); }
     .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
-    .form-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
+    .form-note { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.6; }
 
     .form-error {
-      background: rgba(220, 53, 69, 0.1);
-      border: 1px solid rgba(220, 53, 69, 0.3);
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      font-size: 0.88rem;
-      color: #ff6b7a;
-      margin-top: 0.75rem;
-      display: none;
+      background: rgba(220,53,69,0.1); border: 1px solid rgba(220,53,69,0.3);
+      border-radius: 8px; padding: 0.75rem 1rem;
+      font-size: 0.88rem; color: #ff6b7a; margin-top: 0.75rem; display: none;
     }
 
     .form-error.visible { display: block; }
 
-    .shipping-info {
-      display: none;
-      align-items: center;
-      gap: 0.55rem;
-      font-size: 0.84rem;
-      font-weight: 600;
-      padding: 0.55rem 0.9rem;
-      border-radius: 8px;
-      margin-top: -0.3rem;
-      margin-bottom: 1rem;
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--dark-mid); border-top: 1px solid var(--border);
+      text-align: center; padding: 2.2rem 1.5rem;
+      font-size: 0.85rem; color: var(--text-muted);
     }
 
-    .shipping-info.visible { display: flex; }
-
-    .shipping-info.cheap {
-      background: rgba(200,168,75,0.1);
-      color: var(--gold-light);
-      border: 1px solid rgba(200,168,75,0.25);
-    }
-
-    .shipping-info.pricey {
-      background: rgba(200,168,75,0.07);
-      color: var(--gold-light);
-      border: 1px solid rgba(200,168,75,0.2);
-    }
-
-    .shipping-info.unknown {
-      background: rgba(139,148,158,0.08);
-      color: var(--text-muted);
-      border: 1px solid rgba(139,148,158,0.2);
-    }
-
-    .shipping-info svg {
-      width: 14px; height: 14px;
-      stroke: currentColor;
-      fill: none;
-      flex-shrink: 0;
-    }
+    footer .footer-name { color: var(--gold-light); }
 
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 768px) {
       .buy-layout { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+      .form-row   { grid-template-columns: 1fr; }
       .buy-info-card { position: static; }
+      .hero-books { gap: 1rem; }
     }
 
     @media (max-width: 640px) {
       .nav-links { display: none; }
 
-      .author-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 2rem 1.5rem;
-      }
+      .hero-books { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+      .hero-book-title { font-size: 0.78rem; }
 
+      .author-card { grid-template-columns: 1fr; text-align: center; padding: 2rem 1.5rem; }
       .author-avatar { margin: 0 auto; }
 
-      .cover-caption { gap: 0.7rem; }
-
       .order-form { padding: 1.6rem 1.2rem; }
+      .book-selector { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -705,7 +489,7 @@
     <span class="nav-brand" data-i18n="nav.brand">پروفیسور دکتور لعل زاد</span>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav.about">درباره کتاب</a></li>
+        <li><a href="#hazaras" data-i18n="nav.books">آثار</a></li>
         <li><a href="#author" data-i18n="nav.author">نویسنده</a></li>
         <li><a href="#buy" data-i18n="nav.buy" class="nav-buy-link">خرید</a></li>
         <li><a href="mailto:dr.aam.uk@gmail.com" data-i18n="nav.contact">تماس</a></li>
@@ -718,30 +502,25 @@
   <header class="hero">
     <div class="hero-badge" data-i18n="hero.badge">لندن ۲۰۲۶ · پژوهش تاریخی</div>
 
-    <h1 class="hero-title" data-i18n="hero.title">
-      هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای
-    </h1>
+    <h1 class="hero-title" data-i18n="hero.title">آثار پروفیسور دکتور لعل زاد</h1>
 
     <p class="hero-subtitle" data-i18n="hero.subtitle">
-      اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶
+      پژوهش‌هایی در تاریخ، جغرافیا و هویت منطقه — لندن ۲۰۲۶
     </p>
 
-    <a href="#about" class="hero-cta" data-i18n="hero.cta">بیشتر بخوانید</a>
-
-    <!-- Book cover image -->
-    <div class="cover-wrap">
-      <img
-        src="cover.jpg"
-        alt="جلد کتاب هزاره‌ها – پروفیسور دکتور لعل زاد"
-        class="cover-img"
-        width="860"
-        loading="eager"
-      />
-      <div class="cover-caption">
-        <span data-i18n="cover.caption1">جلد فارسی · هزاره‌ها</span>
-        <span>English Cover · Hazaras</span>
-        <span>Prof. Dr. Lalzad · London 2026</span>
-      </div>
+    <div class="hero-books">
+      <a href="#hazaras" class="hero-book">
+        <img src="hazaras.jpeg" class="hero-book-img" alt="هزاره‌ها" />
+        <span class="hero-book-title" data-i18n="hazaras.short">هزاره‌ها</span>
+      </a>
+      <a href="#bohran" class="hero-book">
+        <img src="bohran.jpeg" class="hero-book-img" alt="بحران" />
+        <span class="hero-book-title" data-i18n="bohran.short">بحران</span>
+      </a>
+      <a href="#afghans" class="hero-book">
+        <img src="afghans.jpeg" class="hero-book-img" alt="افغان‌ها" />
+        <span class="hero-book-title" data-i18n="afghans.short">افغان‌ها</span>
+      </a>
     </div>
 
     <div class="scroll-indicator">
@@ -751,37 +530,205 @@
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- HAZARAS -->
+  <section id="hazaras">
     <div class="container">
-      <span class="section-tag" data-i18n="about.tag">درباره کتاب</span>
-      <h2 class="section-heading" data-i18n="about.heading">سیر تکوین قومی هزاره‌ها در گستره زمان</h2>
+      <span class="section-tag" data-i18n="hazaras.tag">کتاب اول</span>
+      <h2 class="section-heading" data-i18n="hazaras.heading">هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای</h2>
       <div class="divider"></div>
-
-      <p class="about-intro" data-i18n="about.intro">
+      <p class="about-intro" data-i18n="hazaras.intro">
         این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.
       </p>
-
       <div class="features-grid">
-
         <div class="feature-card">
           <div class="feature-icon">📜</div>
-          <h3 data-i18n="card1.title">تحلیل منابع تاریخی</h3>
-          <p data-i18n="card1.text">بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.</p>
+          <h3 data-i18n="hazaras.f1.title">تحلیل منابع تاریخی</h3>
+          <p data-i18n="hazaras.f1.text">بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🗺️</div>
-          <h3 data-i18n="card2.title">جغرافیای انسانی</h3>
-          <p data-i18n="card2.text">مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.</p>
+          <h3 data-i18n="hazaras.f2.title">جغرافیای انسانی</h3>
+          <p data-i18n="hazaras.f2.text">مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🔍</div>
-          <h3 data-i18n="card3.title">هویت شناسی</h3>
-          <p data-i18n="card3.text">تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.</p>
+          <h3 data-i18n="hazaras.f3.title">هویت شناسی</h3>
+          <p data-i18n="hazaras.f3.text">تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.</p>
+        </div>
+      </div>
+      <a href="#buy" class="book-buy-cta" onclick="selectBook('hazaras')" data-i18n="book.buy.cta">خرید این کتاب</a>
+    </div>
+  </section>
+
+  <!-- BOHRAN -->
+  <section id="bohran">
+    <div class="container">
+      <span class="section-tag" data-i18n="bohran.tag">کتاب دوم</span>
+      <h2 class="section-heading" data-i18n="bohran.heading">بحران: تحلیل بحران‌های سیاسی و تاریخی منطقه</h2>
+      <div class="divider"></div>
+      <p class="about-intro" data-i18n="bohran.intro">
+        پروفیسور دکتور لعل زاد در این اثر پژوهشی، به تحلیل ریشه‌ها و پیامدهای بحران‌های سیاسی در منطقه می‌پردازد. این کتاب با استناد به منابع تاریخی و اسناد سیاسی، تصویری جامع از تحولات منطقه ارائه می‌دهد.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 data-i18n="bohran.f1.title">تحلیل سیاسی</h3>
+          <p data-i18n="bohran.f1.text">بررسی جامع تحولات سیاسی و دیپلماتیک منطقه در دوره‌های مختلف تاریخی.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🕰️</div>
+          <h3 data-i18n="bohran.f2.title">پس‌زمینه تاریخی</h3>
+          <p data-i18n="bohran.f2.text">واکاوی ریشه‌های تاریخی بحران‌های معاصر با نگاهی به اسناد و منابع دست اول.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3 data-i18n="bohran.f3.title">تأثیرات منطقه‌ای</h3>
+          <p data-i18n="bohran.f3.text">تحلیل پیامدهای بحران‌ها بر کشورهای همسایه و ثبات منطقه‌ای.</p>
+        </div>
+      </div>
+      <a href="#buy" class="book-buy-cta" onclick="selectBook('bohran')" data-i18n="book.buy.cta">خرید این کتاب</a>
+    </div>
+  </section>
+
+  <!-- AFGHANS -->
+  <section id="afghans">
+    <div class="container">
+      <span class="section-tag" data-i18n="afghans.tag">کتاب سوم</span>
+      <h2 class="section-heading" data-i18n="afghans.heading">افغان‌ها: هویت، تاریخ و فرهنگ</h2>
+      <div class="divider"></div>
+      <p class="about-intro" data-i18n="afghans.intro">
+        این اثر پژوهشی به بررسی جامع هویت، تاریخ و فرهنگ مردم افغانستان می‌پردازد. پروفیسور دکتور لعل زاد با تکیه بر منابع تاریخی معتبر، روایتی عمیق و علمی از سیر تکوین هویت افغانی ارائه می‌دهد.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏛️</div>
+          <h3 data-i18n="afghans.f1.title">هویت قومی</h3>
+          <p data-i18n="afghans.f1.text">پژوهشی در ریشه‌ها و تحولات هویت قومی و ملی مردم افغانستان.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3 data-i18n="afghans.f2.title">میراث فرهنگی</h3>
+          <p data-i18n="afghans.f2.text">بررسی سنت‌ها، آداب و میراث غنی فرهنگی افغانستان در گذر تاریخ.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3 data-i18n="afghans.f3.title">مهاجرت و استقرار</h3>
+          <p data-i18n="afghans.f3.text">مطالعه مسیرهای تاریخی مهاجرت و الگوهای استقرار مردم افغان.</p>
+        </div>
+      </div>
+      <a href="#buy" class="book-buy-cta" onclick="selectBook('afghans')" data-i18n="book.buy.cta">خرید این کتاب</a>
+    </div>
+  </section>
+
+  <!-- PURCHASE -->
+  <section id="buy">
+    <div class="container">
+      <span class="section-tag" data-i18n="buy.tag">خرید کتاب</span>
+      <h2 class="section-heading" data-i18n="buy.heading">سفارش و خرید آنلاین</h2>
+      <div class="divider"></div>
+
+      <div class="buy-layout">
+
+        <!-- Info card -->
+        <div class="buy-info-card">
+          <div class="buy-price-note" data-i18n="buy.price.note">+ هزینه ارسال</div>
+          <ul class="buy-features">
+            <li data-i18n="buy.f1">ارسال به سراسر جهان</li>
+            <li data-i18n="buy.f2">پرداخت امن از طریق Stripe</li>
+            <li data-i18n="buy.f3">رسید از طریق ایمیل</li>
+            <li data-i18n="buy.f4">چاپ با کیفیت بالا</li>
+          </ul>
+          <div class="secure-badge">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span data-i18n="buy.secure">پرداخت امن و رمزگذاری‌شده</span>
+          </div>
         </div>
 
+        <!-- Order form -->
+        <form class="order-form" id="order-form" novalidate>
+
+          <!-- Book selector -->
+          <div class="book-selector-label" data-i18n="buy.select.label">انتخاب کتاب</div>
+          <div class="book-selector">
+            <div class="book-option active" data-book="hazaras" onclick="selectBook('hazaras')">
+              <img src="hazaras.jpeg" alt="Hazaras" />
+              <span data-i18n="hazaras.short">هزاره‌ها</span>
+            </div>
+            <div class="book-option" data-book="bohran" onclick="selectBook('bohran')">
+              <img src="bohran.jpeg" alt="Bohran" />
+              <span data-i18n="bohran.short">بحران</span>
+            </div>
+            <div class="book-option" data-book="afghans" onclick="selectBook('afghans')">
+              <img src="afghans.jpeg" alt="Afghans" />
+              <span data-i18n="afghans.short">افغان‌ها</span>
+            </div>
+          </div>
+
+          <!-- Hidden field to send selected book to Formspree -->
+          <input type="hidden" name="book" id="selected-book-field" value="hazaras" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form.name.label">نام کامل</label>
+              <input type="text" name="name" data-i18n-placeholder="form.name.ph"
+                placeholder="نام و نام خانوادگی" required autocomplete="name" dir="auto" />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form.phone.label">شماره تلفن</label>
+              <input type="tel" name="phone" data-i18n-placeholder="form.phone.ph"
+                placeholder="+44 7000 000000" required autocomplete="tel" dir="ltr" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="form.addr1.label">آدرس — خط اول</label>
+            <input type="text" name="address_line1" data-i18n-placeholder="form.addr1.ph"
+              placeholder="خیابان، پلاک" required autocomplete="address-line1" dir="auto" />
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="form.addr2.label">آدرس — خط دوم (اختیاری)</label>
+            <input type="text" name="address_line2" data-i18n-placeholder="form.addr2.ph"
+              placeholder="آپارتمان، واحد..." autocomplete="address-line2" dir="auto" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form.city.label">شهر</label>
+              <input type="text" name="city" data-i18n-placeholder="form.city.ph"
+                placeholder="شهر" required autocomplete="address-level2" dir="auto" />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form.country.label">کشور</label>
+              <input type="text" name="country" data-i18n-placeholder="form.country.ph"
+                placeholder="کشور" required autocomplete="country-name" dir="auto" />
+            </div>
+          </div>
+
+          <div class="shipping-info" id="shipping-info">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1"></rect>
+              <path d="M16 8h4l3 5v3h-7V8z"></path>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span id="shipping-info-text"></span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn" data-i18n="form.submit">
+            ادامه به پرداخت
+          </button>
+          <div class="form-error" id="form-error" data-i18n="form.error">
+            خطایی رخ داد. لطفاً دوباره تلاش کنید.
+          </div>
+          <p class="form-note" data-i18n="form.note">
+            پس از تأیید اطلاعات، به درگاه امن Stripe هدایت می‌شوید.
+          </p>
+
+        </form>
       </div>
     </div>
   </section>
@@ -812,113 +759,6 @@
           </a>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- PURCHASE -->
-  <section id="buy">
-    <div class="container">
-      <span class="section-tag" data-i18n="buy.tag">خرید کتاب</span>
-      <h2 class="section-heading" data-i18n="buy.heading">سفارش و خرید آنلاین</h2>
-      <div class="divider"></div>
-
-      <div class="buy-layout">
-
-        <!-- Summary card -->
-        <div class="buy-info-card">
-          <div class="buy-price-note" data-i18n="buy.price.note">+ هزینه ارسال</div>
-          <ul class="buy-features">
-            <li data-i18n="buy.f1">ارسال به سراسر جهان</li>
-            <li data-i18n="buy.f2">پرداخت امن از طریق Stripe</li>
-            <li data-i18n="buy.f3">رسید از طریق ایمیل</li>
-            <li data-i18n="buy.f4">چاپ با کیفیت بالا</li>
-          </ul>
-          <div class="secure-badge">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span data-i18n="buy.secure">پرداخت امن و رمزگذاری‌شده</span>
-          </div>
-        </div>
-
-        <!-- Order form -->
-        <form class="order-form" id="order-form" novalidate>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label data-i18n="form.name.label">نام کامل</label>
-              <input type="text" name="name"
-                data-i18n-placeholder="form.name.ph"
-                placeholder="نام و نام خانوادگی"
-                required autocomplete="name" dir="auto" />
-            </div>
-            <div class="form-group">
-              <label data-i18n="form.phone.label">شماره تلفن</label>
-              <input type="tel" name="phone"
-                data-i18n-placeholder="form.phone.ph"
-                placeholder="+44 7000 000000"
-                required autocomplete="tel" dir="ltr" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label data-i18n="form.addr1.label">آدرس — خط اول</label>
-            <input type="text" name="address_line1"
-              data-i18n-placeholder="form.addr1.ph"
-              placeholder="خیابان، پلاک"
-              required autocomplete="address-line1" dir="auto" />
-          </div>
-
-          <div class="form-group">
-            <label data-i18n="form.addr2.label">آدرس — خط دوم (اختیاری)</label>
-            <input type="text" name="address_line2"
-              data-i18n-placeholder="form.addr2.ph"
-              placeholder="آپارتمان، واحد..."
-              autocomplete="address-line2" dir="auto" />
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label data-i18n="form.city.label">شهر</label>
-              <input type="text" name="city"
-                data-i18n-placeholder="form.city.ph"
-                placeholder="شهر"
-                required autocomplete="address-level2" dir="auto" />
-            </div>
-            <div class="form-group">
-              <label data-i18n="form.country.label">کشور</label>
-              <input type="text" name="country"
-                data-i18n-placeholder="form.country.ph"
-                placeholder="کشور"
-                required autocomplete="country-name" dir="auto" />
-            </div>
-          </div>
-
-          <!-- Shipping cost indicator -->
-          <div class="shipping-info" id="shipping-info">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13" rx="1"></rect>
-              <path d="M16 8h4l3 5v3h-7V8z"></path>
-              <circle cx="5.5" cy="18.5" r="2.5"></circle>
-              <circle cx="18.5" cy="18.5" r="2.5"></circle>
-            </svg>
-            <span id="shipping-info-text"></span>
-          </div>
-
-          <button type="submit" class="submit-btn" id="submit-btn" data-i18n="form.submit">
-            ادامه به پرداخت
-          </button>
-          <div class="form-error" id="form-error" data-i18n="form.error">
-            خطایی رخ داد. لطفاً دوباره تلاش کنید.
-          </div>
-          <p class="form-note" data-i18n="form.note">
-            پس از تأیید اطلاعات، به درگاه امن Stripe هدایت می‌شوید.
-          </p>
-
-        </form>
-      </div>
     </div>
   </section>
 
@@ -928,14 +768,31 @@
   </footer>
 
   <script>
-    // ── CONFIGURATION ─────────────────────────────────────────────────────────
-    const FORMSPREE_ID = 'xpqjljvz';
-
     // ── STRIPE PAYMENT LINKS ──────────────────────────────────────────────────
-    const STRIPE_LINK_UK        = 'https://buy.stripe.com/6oUcN629g2sB6uggI84F202';
-    const STRIPE_LINK_EUROPE    = 'https://buy.stripe.com/4gMcN63dkffn6ug9fG4F201';
-    const STRIPE_LINK_USA       = 'https://buy.stripe.com/fZuaEY5lsaZ7g4Q1Ne4F203';
-    const STRIPE_LINK_WORLDWIDE = 'https://buy.stripe.com/bJeaEYeW24AJ7ykfE44F200';
+    // Each book has 4 links (uk / europe / usa / worldwide)
+    // Add Bohran and Afghans links once you create them in Stripe
+    const STRIPE_LINKS = {
+      hazaras: {
+        uk:        'https://buy.stripe.com/6oUcN629g2sB6uggI84F202',
+        europe:    'https://buy.stripe.com/4gMcN63dkffn6ug9fG4F201',
+        usa:       'https://buy.stripe.com/fZuaEY5lsaZ7g4Q1Ne4F203',
+        worldwide: 'https://buy.stripe.com/bJeaEYeW24AJ7ykfE44F200',
+      },
+      bohran: {
+        uk:        'YOUR_BOHRAN_UK_LINK',
+        europe:    'YOUR_BOHRAN_EUROPE_LINK',
+        usa:       'YOUR_BOHRAN_USA_LINK',
+        worldwide: 'YOUR_BOHRAN_WORLDWIDE_LINK',
+      },
+      afghans: {
+        uk:        'YOUR_AFGHANS_UK_LINK',
+        europe:    'YOUR_AFGHANS_EUROPE_LINK',
+        usa:       'YOUR_AFGHANS_USA_LINK',
+        worldwide: 'YOUR_AFGHANS_WORLDWIDE_LINK',
+      }
+    };
+
+    const FORMSPREE_ID = 'xpqjljvz';
 
     // ── COUNTRY LISTS ─────────────────────────────────────────────────────────
     const UK_COUNTRIES = [
@@ -955,9 +812,7 @@
       'vatican city','vatican'
     ];
 
-    const USA_NAMES = [
-      'united states','united states of america','usa','us','america'
-    ];
+    const USA_NAMES = ['united states','united states of america','usa','us','america'];
 
     function detectZone(countryInput) {
       const c = countryInput.trim().toLowerCase();
@@ -971,44 +826,57 @@
       return 'worldwide';
     }
 
-    function getStripeLink(zone) {
-      if (zone === 'uk')      return STRIPE_LINK_UK;
-      if (zone === 'europe')  return STRIPE_LINK_EUROPE;
-      if (zone === 'usa')     return STRIPE_LINK_USA;
-      return STRIPE_LINK_WORLDWIDE;
+    function getStripeLink(book, zone) {
+      const links = STRIPE_LINKS[book] || STRIPE_LINKS.hazaras;
+      return links[zone] || links.worldwide;
     }
-    // ──────────────────────────────────────────────────────────────────────────
 
+    // ── TRANSLATIONS ──────────────────────────────────────────────────────────
     const translations = {
       fa: {
         'nav.brand':        'پروفیسور دکتور لعل زاد',
-        'nav.about':        'درباره کتاب',
+        'nav.books':        'آثار',
         'nav.author':       'نویسنده',
         'nav.buy':          'خرید',
         'nav.contact':      'تماس',
         'hero.badge':       'لندن ۲۰۲۶ · پژوهش تاریخی',
-        'hero.title':       'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای',
-        'hero.subtitle':    'اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶',
-        'hero.cta':         'بیشتر بخوانید',
-        'cover.caption1':   'جلد فارسی · هزاره‌ها',
-        'about.tag':        'درباره کتاب',
-        'about.heading':    'سیر تکوین قومی هزاره‌ها در گستره زمان',
-        'about.intro':      'این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.',
-        'card1.title':      'تحلیل منابع تاریخی',
-        'card1.text':       'بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.',
-        'card2.title':      'جغرافیای انسانی',
-        'card2.text':       'مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.',
-        'card3.title':      'هویت شناسی',
-        'card3.text':       'تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.',
-        'author.tag':       'نویسنده',
-        'author.heading':   'درباره نویسنده و ارتباط',
-        'author.name':      'پروفیسور دکتور لعل زاد',
-        'author.role':      'پژوهشگر تاریخ و جغرافیای منطقه — لندن',
-        'author.bio':       'پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.',
+        'hero.title':       'آثار پروفیسور دکتور لعل زاد',
+        'hero.subtitle':    'پژوهش‌هایی در تاریخ، جغرافیا و هویت منطقه — لندن ۲۰۲۶',
+        'hazaras.short':    'هزاره‌ها',
+        'bohran.short':     'بحران',
+        'afghans.short':    'افغان‌ها',
+        'hazaras.tag':      'کتاب اول',
+        'hazaras.heading':  'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای',
+        'hazaras.intro':    'این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.',
+        'hazaras.f1.title': 'تحلیل منابع تاریخی',
+        'hazaras.f1.text':  'بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.',
+        'hazaras.f2.title': 'جغرافیای انسانی',
+        'hazaras.f2.text':  'مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.',
+        'hazaras.f3.title': 'هویت شناسی',
+        'hazaras.f3.text':  'تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.',
+        'bohran.tag':       'کتاب دوم',
+        'bohran.heading':   'بحران: تحلیل بحران‌های سیاسی و تاریخی منطقه',
+        'bohran.intro':     'پروفیسور دکتور لعل زاد در این اثر پژوهشی، به تحلیل ریشه‌ها و پیامدهای بحران‌های سیاسی در منطقه می‌پردازد. این کتاب با استناد به منابع تاریخی و اسناد سیاسی، تصویری جامع از تحولات منطقه ارائه می‌دهد.',
+        'bohran.f1.title':  'تحلیل سیاسی',
+        'bohran.f1.text':   'بررسی جامع تحولات سیاسی و دیپلماتیک منطقه در دوره‌های مختلف تاریخی.',
+        'bohran.f2.title':  'پس‌زمینه تاریخی',
+        'bohran.f2.text':   'واکاوی ریشه‌های تاریخی بحران‌های معاصر با نگاهی به اسناد و منابع دست اول.',
+        'bohran.f3.title':  'تأثیرات منطقه‌ای',
+        'bohran.f3.text':   'تحلیل پیامدهای بحران‌ها بر کشورهای همسایه و ثبات منطقه‌ای.',
+        'afghans.tag':      'کتاب سوم',
+        'afghans.heading':  'افغان‌ها: هویت، تاریخ و فرهنگ',
+        'afghans.intro':    'این اثر پژوهشی به بررسی جامع هویت، تاریخ و فرهنگ مردم افغانستان می‌پردازد. پروفیسور دکتور لعل زاد با تکیه بر منابع تاریخی معتبر، روایتی عمیق و علمی از سیر تکوین هویت افغانی ارائه می‌دهد.',
+        'afghans.f1.title': 'هویت قومی',
+        'afghans.f1.text':  'پژوهشی در ریشه‌ها و تحولات هویت قومی و ملی مردم افغانستان.',
+        'afghans.f2.title': 'میراث فرهنگی',
+        'afghans.f2.text':  'بررسی سنت‌ها، آداب و میراث غنی فرهنگی افغانستان در گذر تاریخ.',
+        'afghans.f3.title': 'مهاجرت و استقرار',
+        'afghans.f3.text':  'مطالعه مسیرهای تاریخی مهاجرت و الگوهای استقرار مردم افغان.',
+        'book.buy.cta':     'خرید این کتاب',
         'buy.tag':          'خرید کتاب',
         'buy.heading':      'سفارش و خرید آنلاین',
-        'buy.price':        '£XX',
         'buy.price.note':   '+ هزینه ارسال',
+        'buy.select.label': 'انتخاب کتاب',
         'buy.f1':           'ارسال به سراسر جهان',
         'buy.f2':           'پرداخت امن از طریق Stripe',
         'buy.f3':           'رسید از طریق ایمیل',
@@ -1034,39 +902,59 @@
         'ship.europe':      'ارسال به اروپا',
         'ship.usa':         'ارسال به آمریکا',
         'ship.worldwide':   'ارسال بین‌المللی — با ما تماس بگیرید',
+        'author.tag':       'نویسنده',
+        'author.heading':   'درباره نویسنده و ارتباط',
+        'author.name':      'پروفیسور دکتور لعل زاد',
+        'author.role':      'پژوهشگر تاریخ و جغرافیای منطقه — لندن',
+        'author.bio':       'پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.',
         'footer.year':      '۲۰۲۶',
         'footer.name':      'پروفیسور دکتور لعل زاد',
         'footer.rights':    'تمامی حقوق محفوظ است.',
       },
       en: {
         'nav.brand':        'Prof. Dr. Lalzad',
-        'nav.about':        'About the Book',
+        'nav.books':        'Books',
         'nav.author':       'Author',
         'nav.buy':          'Buy',
         'nav.contact':      'Contact',
         'hero.badge':       'London 2026 · Historical Research',
-        'hero.title':       'Hazaras: A Study in History and Geography',
-        'hero.subtitle':    'By Prof. Dr. Lalzad — London 2026',
-        'hero.cta':         'Read More',
-        'cover.caption1':   'Persian Cover · Hazaras',
-        'about.tag':        'About the Book',
-        'about.heading':    'The Ethnic Evolution of the Hazaras Through Time',
-        'about.intro':      'This new scholarly work by Prof. Dr. Lalzad offers a deep and rigorous examination of the historical and geographical roots of the Hazara people. Drawing on authoritative sources from the Mongol and Timurid periods, the book explores the military units of thousand-man formations and their transformation into an ethnic identity and present-day settlement areas.',
-        'card1.title':      'Historical Source Analysis',
-        'card1.text':       'Careful examination of classical texts and ancient maps from the Mongol and Timurid periods using rigorous scholarly methodology.',
-        'card2.title':      'Human Geography',
-        'card2.text':       'Study of migration routes and historical settlements of the Hazara people across the regional geographical landscape.',
-        'card3.title':      'Identity Studies',
-        'card3.text':       'Clarifying the distinction between the historical military concept of "Hazara" and its modern ethnic meaning through critical analysis.',
-        'author.tag':       'Author',
-        'author.heading':   'About the Author & Contact',
-        'author.name':      'Prof. Dr. Lalzad',
-        'author.role':      'Researcher in Regional History & Geography — London',
-        'author.bio':       'Prof. Dr. Lalzad is a London-based researcher specialising in regional history and geography. He has prepared this collection for publication in 2026.',
+        'hero.title':       'Works by Prof. Dr. Lalzad',
+        'hero.subtitle':    'Research in History, Geography and Identity of the Region — London 2026',
+        'hazaras.short':    'Hazaras',
+        'bohran.short':     'Bohran',
+        'afghans.short':    'Afghans',
+        'hazaras.tag':      'Book One',
+        'hazaras.heading':  'Hazaras: A Study in History and Geography',
+        'hazaras.intro':    'This new scholarly work by Prof. Dr. Lalzad offers a deep and rigorous examination of the historical and geographical roots of the Hazara people. Drawing on authoritative sources from the Mongol and Timurid periods, the book explores the military units of thousand-man formations and their transformation into an ethnic identity and present-day settlement areas.',
+        'hazaras.f1.title': 'Historical Source Analysis',
+        'hazaras.f1.text':  'Careful examination of classical texts and ancient maps from the Mongol and Timurid periods using rigorous scholarly methodology.',
+        'hazaras.f2.title': 'Human Geography',
+        'hazaras.f2.text':  'Study of migration routes and historical settlements of the Hazara people across the regional geographical landscape.',
+        'hazaras.f3.title': 'Identity Studies',
+        'hazaras.f3.text':  'Clarifying the distinction between the historical military concept of "Hazara" and its modern ethnic meaning through critical analysis.',
+        'bohran.tag':       'Book Two',
+        'bohran.heading':   'Bohran: Analysis of Political and Historical Crises',
+        'bohran.intro':     'In this scholarly work, Prof. Dr. Lalzad analyses the roots and consequences of political crises in the region. Drawing on historical sources and political documents, the book offers a comprehensive picture of regional transformations.',
+        'bohran.f1.title':  'Political Analysis',
+        'bohran.f1.text':   'Comprehensive examination of political and diplomatic developments across different historical periods.',
+        'bohran.f2.title':  'Historical Context',
+        'bohran.f2.text':   'Tracing the historical roots of contemporary crises through first-hand documents and primary sources.',
+        'bohran.f3.title':  'Regional Impact',
+        'bohran.f3.text':   'Analysis of the consequences of crises on neighbouring countries and regional stability.',
+        'afghans.tag':      'Book Three',
+        'afghans.heading':  'Afghans: Identity, History and Culture',
+        'afghans.intro':    'This research work offers a comprehensive examination of the identity, history and culture of the Afghan people. Prof. Dr. Lalzad draws on authoritative historical sources to present a deep and scholarly account of the formation of Afghan identity.',
+        'afghans.f1.title': 'Ethnic Identity',
+        'afghans.f1.text':  'Research into the roots and evolution of the ethnic and national identity of the Afghan people.',
+        'afghans.f2.title': 'Cultural Heritage',
+        'afghans.f2.text':  'Examination of the traditions, customs and rich cultural heritage of Afghanistan through history.',
+        'afghans.f3.title': 'Migration & Settlement',
+        'afghans.f3.text':  'Study of historical migration routes and patterns of Afghan settlement.',
+        'book.buy.cta':     'Buy This Book',
         'buy.tag':          'Buy the Book',
         'buy.heading':      'Order Online',
-        'buy.price':        '£XX',
         'buy.price.note':   '+ shipping',
+        'buy.select.label': 'Select a Book',
         'buy.f1':           'Worldwide shipping',
         'buy.f2':           'Secure payment via Stripe',
         'buy.f3':           'Email receipt included',
@@ -1092,20 +980,36 @@
         'ship.europe':      'Shipping to Europe',
         'ship.usa':         'Shipping to USA',
         'ship.worldwide':   'International shipping — please contact us for rates',
+        'author.tag':       'Author',
+        'author.heading':   'About the Author & Contact',
+        'author.name':      'Prof. Dr. Lalzad',
+        'author.role':      'Researcher in Regional History & Geography — London',
+        'author.bio':       'Prof. Dr. Lalzad is a London-based researcher specialising in regional history and geography. He has prepared this collection for publication in 2026.',
         'footer.year':      '2026',
         'footer.name':      'Prof. Dr. Lalzad',
         'footer.rights':    'All rights reserved.',
       }
     };
 
+    // ── STATE ─────────────────────────────────────────────────────────────────
     let currentLang = localStorage.getItem('lang') || 'fa';
+    let selectedBook = 'hazaras';
 
+    // ── BOOK SELECTOR ─────────────────────────────────────────────────────────
+    function selectBook(bookId) {
+      selectedBook = bookId;
+      document.getElementById('selected-book-field').value = bookId;
+      document.querySelectorAll('.book-option').forEach(function(el) {
+        el.classList.toggle('active', el.dataset.book === bookId);
+      });
+    }
+
+    // ── LANGUAGE ──────────────────────────────────────────────────────────────
     function setLanguage(lang) {
       const html = document.documentElement;
       html.lang = lang;
-      html.dir = lang === 'fa' ? 'rtl' : 'ltr';
+      html.dir  = lang === 'fa' ? 'rtl' : 'ltr';
 
-      // Update text content
       document.querySelectorAll('[data-i18n]').forEach(function(el) {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key] !== undefined) {
@@ -1113,7 +1017,6 @@
         }
       });
 
-      // Update input placeholders
       document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
         const key = el.getAttribute('data-i18n-placeholder');
         if (translations[lang] && translations[lang][key] !== undefined) {
@@ -1121,36 +1024,30 @@
         }
       });
 
-      // Update image alt text
-      const img = document.querySelector('.cover-img');
-      if (img) {
-        img.alt = lang === 'fa'
-          ? 'جلد کتاب هزاره‌ها – پروفیسور دکتور لعل زاد'
-          : 'Book cover: Hazaras – Prof. Dr. Lalzad';
-      }
-
-      // Update page title and meta description
       document.title = lang === 'fa'
-        ? 'هزاره‌ها – پروفیسور دکتور لعل زاد'
-        : 'Hazaras – Prof. Dr. Lalzad';
+        ? 'آثار پروفیسور دکتور لعل زاد'
+        : 'Works by Prof. Dr. Lalzad';
 
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
         meta.content = lang === 'fa'
-          ? 'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای - اثری از پروفیسور دکتور لعل زاد'
-          : 'Hazaras: A Study in History and Geography — By Prof. Dr. Lalzad';
+          ? 'آثار پروفیسور دکتور لعل زاد — هزاره‌ها، بحران، افغان‌ها'
+          : 'Works by Prof. Dr. Lalzad — Hazaras, Bohran, Afghans';
       }
 
       document.getElementById('lang-btn').textContent = lang === 'fa' ? 'EN' : 'فا';
       localStorage.setItem('lang', lang);
       currentLang = lang;
+
+      // Re-render shipping badge in new language
+      updateShippingInfo(document.querySelector('[name="country"]').value);
     }
 
     function toggleLanguage() {
       setLanguage(currentLang === 'fa' ? 'en' : 'fa');
     }
 
-    // ── LIVE SHIPPING INDICATOR ───────────────────────────────────────────────
+    // ── SHIPPING INDICATOR ────────────────────────────────────────────────────
     function updateShippingInfo(countryValue) {
       const indicator = document.getElementById('shipping-info');
       const label     = document.getElementById('shipping-info-text');
@@ -1158,7 +1055,6 @@
       const zone      = detectZone(countryValue);
 
       indicator.classList.remove('visible', 'cheap', 'pricey', 'unknown');
-
       if (!zone) return;
 
       indicator.classList.add('visible');
@@ -1185,12 +1081,11 @@
     document.getElementById('order-form').addEventListener('submit', async function(e) {
       e.preventDefault();
 
-      const form      = e.target;
-      const btn       = document.getElementById('submit-btn');
-      const errorBox  = document.getElementById('form-error');
-      const t         = translations[currentLang];
+      const form     = e.target;
+      const btn      = document.getElementById('submit-btn');
+      const errorBox = document.getElementById('form-error');
+      const t        = translations[currentLang];
 
-      // Basic validation
       const requiredFields = form.querySelectorAll('[required]');
       let valid = true;
       requiredFields.forEach(function(field) {
@@ -1198,26 +1093,23 @@
       });
       if (!valid) return;
 
-      // Detect shipping zone and choose Stripe link
       const zone       = detectZone(form.querySelector('[name="country"]').value);
-      const stripeLink = getStripeLink(zone);
+      const stripeLink = getStripeLink(selectedBook, zone);
 
-      // Loading state
       btn.disabled    = true;
       btn.textContent = t['form.submitting'];
       errorBox.classList.remove('visible');
 
       try {
         const response = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
-          method:  'POST',
-          body:    new FormData(form),
+          method: 'POST', body: new FormData(form),
           headers: { 'Accept': 'application/json' }
         });
 
         if (response.ok) {
           window.location.href = stripeLink;
         } else {
-          throw new Error('Form submission failed');
+          throw new Error('failed');
         }
       } catch (err) {
         btn.disabled    = false;
@@ -1227,7 +1119,7 @@
       }
     });
 
-    // Apply saved language on page load
+    // ── INIT ──────────────────────────────────────────────────────────────────
     setLanguage(currentLang);
   </script>
 
