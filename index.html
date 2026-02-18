@@ -37,6 +37,11 @@
       direction: rtl;
     }
 
+    html[lang="en"] body {
+      direction: ltr;
+      font-family: 'Vazirmatn', 'Segoe UI', sans-serif;
+    }
+
     /* ── NAV ─────────────────────────────────────────── */
     nav {
       position: fixed;
@@ -58,6 +63,12 @@
       color: var(--gold);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
     .nav-links {
       display: flex;
       gap: 1.8rem;
@@ -73,6 +84,27 @@
     }
 
     .nav-links a:hover { color: var(--gold-light); }
+
+    /* ── LANGUAGE SWITCHER ──────────────────────────── */
+    .lang-btn {
+      background: rgba(200,168,75,0.1);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.3rem 0.85rem;
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s;
+      font-family: 'Vazirmatn', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .lang-btn:hover {
+      background: rgba(200,168,75,0.22);
+      border-color: var(--gold);
+    }
 
     /* ── HERO ────────────────────────────────────────── */
     .hero {
@@ -270,6 +302,10 @@
       margin-bottom: 2.5rem;
     }
 
+    html[lang="en"] .divider {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
     /* ── ABOUT SECTION ───────────────────────────────── */
     #about { background: var(--dark-mid); }
 
@@ -357,14 +393,19 @@
 
     .author-avatar {
       width: 90px; height: 90px;
-      background: linear-gradient(135deg, var(--gold), #a8852e);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
       flex-shrink: 0;
       box-shadow: 0 0 0 4px rgba(200,168,75,0.2);
+      overflow: hidden;
+      border: 2px solid var(--border);
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
     }
 
     .author-info h3 {
@@ -425,7 +466,7 @@
       color: var(--text-muted);
     }
 
-    footer span { color: var(--gold-light); }
+    footer .footer-name { color: var(--gold-light); }
 
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 640px) {
@@ -447,27 +488,30 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-brand">پروفیسور دکتور لعل زاد</span>
-    <ul class="nav-links">
-      <li><a href="#about">درباره کتاب</a></li>
-      <li><a href="#author">نویسنده</a></li>
-      <li><a href="mailto:dr.aam.uk@gmail.com">تماس</a></li>
-    </ul>
+    <span class="nav-brand" data-i18n="nav.brand">پروفیسور دکتور لعل زاد</span>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">درباره کتاب</a></li>
+        <li><a href="#author" data-i18n="nav.author">نویسنده</a></li>
+        <li><a href="mailto:dr.aam.uk@gmail.com" data-i18n="nav.contact">تماس</a></li>
+      </ul>
+      <button class="lang-btn" id="lang-btn" onclick="toggleLanguage()">EN</button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-badge">لندن ۲۰۲۶ · پژوهش تاریخی</div>
+    <div class="hero-badge" data-i18n="hero.badge">لندن ۲۰۲۶ · پژوهش تاریخی</div>
 
-    <h1 class="hero-title">
+    <h1 class="hero-title" data-i18n="hero.title">
       هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای
     </h1>
 
-    <p class="hero-subtitle">
+    <p class="hero-subtitle" data-i18n="hero.subtitle">
       اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶
     </p>
 
-    <a href="#about" class="hero-cta">بیشتر بخوانید</a>
+    <a href="#about" class="hero-cta" data-i18n="hero.cta">بیشتر بخوانید</a>
 
     <!-- Book cover image -->
     <div class="cover-wrap">
@@ -479,7 +523,7 @@
         loading="eager"
       />
       <div class="cover-caption">
-        <span>جلد فارسی · هزاره‌ها</span>
+        <span data-i18n="cover.caption1">جلد فارسی · هزاره‌ها</span>
         <span>English Cover · Hazaras</span>
         <span>Prof. Dr. Lalzad · London 2026</span>
       </div>
@@ -495,11 +539,11 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <span class="section-tag">درباره کتاب</span>
-      <h2 class="section-heading">سیر تکوین قومی هزاره‌ها در گستره زمان</h2>
+      <span class="section-tag" data-i18n="about.tag">درباره کتاب</span>
+      <h2 class="section-heading" data-i18n="about.heading">سیر تکوین قومی هزاره‌ها در گستره زمان</h2>
       <div class="divider"></div>
 
-      <p class="about-intro">
+      <p class="about-intro" data-i18n="about.intro">
         این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.
       </p>
 
@@ -507,20 +551,20 @@
 
         <div class="feature-card">
           <div class="feature-icon">📜</div>
-          <h3>تحلیل منابع تاریخی</h3>
-          <p>بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.</p>
+          <h3 data-i18n="card1.title">تحلیل منابع تاریخی</h3>
+          <p data-i18n="card1.text">بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🗺️</div>
-          <h3>جغرافیای انسانی</h3>
-          <p>مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.</p>
+          <h3 data-i18n="card2.title">جغرافیای انسانی</h3>
+          <p data-i18n="card2.text">مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🔍</div>
-          <h3>هویت شناسی</h3>
-          <p>تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.</p>
+          <h3 data-i18n="card3.title">هویت شناسی</h3>
+          <p data-i18n="card3.text">تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.</p>
         </div>
 
       </div>
@@ -530,16 +574,18 @@
   <!-- AUTHOR -->
   <section id="author">
     <div class="container">
-      <span class="section-tag">نویسنده</span>
-      <h2 class="section-heading">درباره نویسنده و ارتباط</h2>
+      <span class="section-tag" data-i18n="author.tag">نویسنده</span>
+      <h2 class="section-heading" data-i18n="author.heading">درباره نویسنده و ارتباط</h2>
       <div class="divider"></div>
 
       <div class="author-card">
-        <div class="author-avatar">👤</div>
+        <div class="author-avatar">
+          <img src="lalzadPerson.jpeg" alt="Prof. Dr. Lalzad" />
+        </div>
         <div class="author-info">
-          <h3>پروفیسور دکتور لعل زاد</h3>
-          <p class="author-title">پژوهشگر تاریخ و جغرافیای منطقه — لندن</p>
-          <p>
+          <h3 data-i18n="author.name">پروفیسور دکتور لعل زاد</h3>
+          <p class="author-title" data-i18n="author.role">پژوهشگر تاریخ و جغرافیای منطقه — لندن</p>
+          <p data-i18n="author.bio">
             پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.
           </p>
           <a href="mailto:dr.aam.uk@gmail.com" class="contact-link">
@@ -557,8 +603,117 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© ۲۰۲۶ <span>پروفیسور دکتور لعل زاد</span> — تمامی حقوق محفوظ است.</p>
+    <p>© <span class="footer-name" data-i18n="footer.year">۲۰۲۶</span> <span class="footer-name" data-i18n="footer.name">پروفیسور دکتور لعل زاد</span> — <span data-i18n="footer.rights">تمامی حقوق محفوظ است.</span></p>
   </footer>
+
+  <script>
+    const translations = {
+      fa: {
+        'nav.brand':      'پروفیسور دکتور لعل زاد',
+        'nav.about':      'درباره کتاب',
+        'nav.author':     'نویسنده',
+        'nav.contact':    'تماس',
+        'hero.badge':     'لندن ۲۰۲۶ · پژوهش تاریخی',
+        'hero.title':     'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای',
+        'hero.subtitle':  'اثری از پروفیسور دکتور لعل زاد — لندن ۲۰۲۶',
+        'hero.cta':       'بیشتر بخوانید',
+        'cover.caption1': 'جلد فارسی · هزاره‌ها',
+        'about.tag':      'درباره کتاب',
+        'about.heading':  'سیر تکوین قومی هزاره‌ها در گستره زمان',
+        'about.intro':    'این اثر پژوهشی جدید توسط پروفیسور دکتور لعل زاد، نگاهی عمیق و علمی به ریشه‌های تاریخی و جغرافیایی قوم هزاره دارد. این کتاب با استناد به منابع معتبر دوره‌های مغولی و تیموری، به بررسی واحدهای لشکری هزارنفری و تحول آن‌ها به هویت قومی و محلات استقرار امروزی می‌پردازد.',
+        'card1.title':    'تحلیل منابع تاریخی',
+        'card1.text':     'بررسی دقیق متون کلاسیک و نقشه‌های قدیمی دوره‌های مغولی و تیموری با روش‌شناسی علمی.',
+        'card2.title':    'جغرافیای انسانی',
+        'card2.text':     'مطالعه مسیرهای مهاجرت و سکونت‌گاه‌های تاریخی قوم هزاره در پهنه جغرافیایی منطقه.',
+        'card3.title':    'هویت شناسی',
+        'card3.text':     'تبیین تفاوت میان مفاهیم نظامی «هزاره» در تاریخ و مفاهیم قومی امروزی با دیدی نقادانه.',
+        'author.tag':     'نویسنده',
+        'author.heading': 'درباره نویسنده و ارتباط',
+        'author.name':    'پروفیسور دکتور لعل زاد',
+        'author.role':    'پژوهشگر تاریخ و جغرافیای منطقه — لندن',
+        'author.bio':     'پروفیسور دکتور لعل زاد، پژوهشگر مقیم لندن، با تخصص در تاریخ و جغرافیای منطقه، این مجموعه را برای سال ۲۰۲۶ آماده انتشار کرده است.',
+        'footer.year':    '۲۰۲۶',
+        'footer.name':    'پروفیسور دکتور لعل زاد',
+        'footer.rights':  'تمامی حقوق محفوظ است.',
+      },
+      en: {
+        'nav.brand':      'Prof. Dr. Lalzad',
+        'nav.about':      'About the Book',
+        'nav.author':     'Author',
+        'nav.contact':    'Contact',
+        'hero.badge':     'London 2026 · Historical Research',
+        'hero.title':     'Hazaras: A Study in History and Geography',
+        'hero.subtitle':  'By Prof. Dr. Lalzad — London 2026',
+        'hero.cta':       'Read More',
+        'cover.caption1': 'Persian Cover · Hazaras',
+        'about.tag':      'About the Book',
+        'about.heading':  'The Ethnic Evolution of the Hazaras Through Time',
+        'about.intro':    'This new scholarly work by Prof. Dr. Lalzad offers a deep and rigorous examination of the historical and geographical roots of the Hazara people. Drawing on authoritative sources from the Mongol and Timurid periods, the book explores the military units of thousand-man formations and their transformation into an ethnic identity and present-day settlement areas.',
+        'card1.title':    'Historical Source Analysis',
+        'card1.text':     'Careful examination of classical texts and ancient maps from the Mongol and Timurid periods using rigorous scholarly methodology.',
+        'card2.title':    'Human Geography',
+        'card2.text':     'Study of migration routes and historical settlements of the Hazara people across the regional geographical landscape.',
+        'card3.title':    'Identity Studies',
+        'card3.text':     'Clarifying the distinction between the historical military concept of "Hazara" and its modern ethnic meaning through critical analysis.',
+        'author.tag':     'Author',
+        'author.heading': 'About the Author & Contact',
+        'author.name':    'Prof. Dr. Lalzad',
+        'author.role':    'Researcher in Regional History & Geography — London',
+        'author.bio':     'Prof. Dr. Lalzad is a London-based researcher specialising in regional history and geography. He has prepared this collection for publication in 2026.',
+        'footer.year':    '2026',
+        'footer.name':    'Prof. Dr. Lalzad',
+        'footer.rights':  'All rights reserved.',
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'fa';
+
+    function setLanguage(lang) {
+      const html = document.documentElement;
+      html.lang = lang;
+      html.dir = lang === 'fa' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key] !== undefined) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update image alt text
+      const img = document.querySelector('.cover-img');
+      if (img) {
+        img.alt = lang === 'fa'
+          ? 'جلد کتاب هزاره‌ها – پروفیسور دکتور لعل زاد'
+          : 'Book cover: Hazaras – Prof. Dr. Lalzad';
+      }
+
+      // Update page title and meta description
+      document.title = lang === 'fa'
+        ? 'هزاره‌ها – پروفیسور دکتور لعل زاد'
+        : 'Hazaras – Prof. Dr. Lalzad';
+
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        meta.content = lang === 'fa'
+          ? 'هزاره‌ها: پژوهشی در گستره تاریخ و جغرافیای - اثری از پروفیسور دکتور لعل زاد'
+          : 'Hazaras: A Study in History and Geography — By Prof. Dr. Lalzad';
+      }
+
+      // Update button label to show the other language
+      document.getElementById('lang-btn').textContent = lang === 'fa' ? 'EN' : 'فا';
+
+      localStorage.setItem('lang', lang);
+      currentLang = lang;
+    }
+
+    function toggleLanguage() {
+      setLanguage(currentLang === 'fa' ? 'en' : 'fa');
+    }
+
+    // Apply saved language on page load
+    setLanguage(currentLang);
+  </script>
 
 </body>
 </html>
