@@ -700,10 +700,16 @@
                 placeholder="Your full name" required autocomplete="name" dir="auto" />
             </div>
             <div class="form-group">
-              <label>Phone Number</label>
+              <label>Phone Number *</label>
               <input type="tel" name="phone"
                 placeholder="+44 7000 000000" required autocomplete="tel" dir="ltr" />
             </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email"
+              placeholder="your@email.com" required autocomplete="email" dir="ltr" />
           </div>
 
           <div class="form-group">
@@ -713,9 +719,9 @@
           </div>
 
           <div class="form-group">
-            <label>Address Line 2 (optional)</label>
+            <label>Address Line 2</label>
             <input type="text" name="address_line2"
-              placeholder="Apartment, suite..." autocomplete="address-line2" dir="auto" />
+              placeholder="Apartment, suite..." required autocomplete="address-line2" dir="auto" />
           </div>
 
           <div class="form-row">
@@ -725,10 +731,16 @@
                 placeholder="City" required autocomplete="address-level2" dir="auto" />
             </div>
             <div class="form-group">
-              <label>Country</label>
-              <input type="text" name="country"
-                placeholder="Country" required autocomplete="country-name" dir="auto" />
+              <label>Postcode / Zip Code</label>
+              <input type="text" name="postcode"
+                placeholder="e.g. SW1A 1AA" required autocomplete="postal-code" dir="ltr" />
             </div>
+          </div>
+
+          <div class="form-group">
+            <label>Country</label>
+            <input type="text" name="country"
+              placeholder="Country" required autocomplete="country-name" dir="auto" />
           </div>
 
           <div class="shipping-info" id="shipping-info">
